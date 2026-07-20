@@ -1,10 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Ma marque de mobilier</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artefact — Mobilier intelligent</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0e9;
+            color: #25231f;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 8%;
+            background-color: #f4f0e9;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: #25231f;
+            text-decoration: none;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(
+                110deg,
+                #ded3c3 0%,
+                #f4f0e9 65%
+            );
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .surtitle {
+            margin-bottom: 20px;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 58px;
+            line-height: 1.05;
+        }
+
+        .description {
+            max-width: 550px;
+            margin-bottom: 35px;
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 16px 28px;
+            background-color: #25231f;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .product {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .product h2 {
+            margin-bottom: 15px;
+            font-size: 38px;
+        }
+
+        .product > p {
+            margin-bottom: 45px;
+            color: #656057;
+        }
+
+        .product-card {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .product-visual {
+            min-height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c8b49a;
+            color: white;
+            font-size: 80px;
+        }
+
+        .product-info {
+            padding: 50px;
+            text-align: left;
+        }
+
+        .product-info h3 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .product-info p {
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .features {
+            margin-bottom: 30px;
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            padding: 35px 8%;
+            background-color: #25231f;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin-right: 20px;
+                margin-left: 0;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Bienvenue</h1>
-  <p>Ceci est ma future marque de mobilier.</p>
+
+    <header>
+        <div class="logo">ARTEFACT</div>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#collection">Collection</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <p class="surtitle">Mobilier pensé autrement</p>
+
+                <h1>
+                    Des meubles beaux.<br>
+                    Des fonctions qui ont du sens.
+                </h1>
+
+                <p class="description">
+                    Nous imaginons du mobilier capable de répondre aux petits
+                    problèmes du quotidien, sans sacrifier l'élégance de votre intérieur.
+                </p>
+
+                <a class="button" href="#collection">
+                    Découvrir notre première création
+                </a>
+            </div>
+        </section>
+
+        <section class="product" id="collection">
+            <h2>Notre première création</h2>
+
+            <p>Un meuble de chambre pensé pour vous et votre compagnon.</p>
+
+            <article class="product-card">
+                <div class="product-visual">
+                    🐕
+                </div>
+
+                <div class="product-info">
+                    <h3>Le coffre compagnon</h3>
+
+                    <p>
+                        Un coffre de bout de lit élégant intégrant trois petites
+                        marches pour permettre aux petits chiens de rejoindre
+                        facilement leur maître.
+                    </p>
+
+                    <ul class="features">
+                        <li>✓ Grand espace de rangement</li>
+                        <li>✓ Trois marches intégrées</li>
+                        <li>✓ Niche discrète</li>
+                        <li>✓ Fabrication à la commande</li>
+                    </ul>
+
+                    <a class="button" href="#contact">
+                        Découvrir prochainement
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2026 Artefact — Mobilier intelligent</p>
+    </footer>
+
 </body>
 </html>
